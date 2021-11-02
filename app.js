@@ -38,7 +38,7 @@ app.post('/sendmail', function (req, res) {
                 user: 'creationzv@gmail.com',
                 pass: 'Vishnu@123'
             }
-        });
+        })
     
         console.log("started mail");
         
