@@ -11,13 +11,13 @@ app.set('views', __dirname + '/src/views');
 app.get('/', (req, res) => {
     res.render('index');
     // res.send('coding challenge');
-});
+})
 
 app.get('/diwali', function (req, res) {
     let name = req.query.name;
     res.render('diwali', {
         name: name
-    });
+    })
 });
 
 
@@ -35,8 +35,8 @@ app.post('/sendmail', function (req, res) {
         let mailTransporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
-                user: 'msmiam918@gmail.com',
-                pass: 'authenticat55'
+                user: 'creationzv@gmail.com',
+                pass: 'Vishnu@123'
             }
         });
     

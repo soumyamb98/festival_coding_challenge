@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://authenticat:authenticat@diwali.4hpjv.mongodb.net/test');
+mongoose.connect('mongodb+srv://authenticat:authenticat@diwali.4hpjv.mongodb.net/diwali');
 
 const schema = mongoose.Schema;
 const modelcele = new schema({

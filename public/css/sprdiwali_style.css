@@ -5,12 +5,16 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  
 }
 
 section {
   position: relative;
   min-height: 100vh;
-  background-color: #f8dd30;
+  /* background-color: #f8dd30; */
+  /* background-image: url('/images/1175377686ba-awesome-colorful-fireworks-animated-gif-image-s.gif'); */
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,7 +25,8 @@ section .container {
   position: relative;
   width: 800px;
   height: 500px;
-  background: #fff;
+  /* background: #fff; */
+  background-image: url('/images/1175377686ba-awesome-colorful-fireworks-animated-gif-image-s.gif');
   box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
