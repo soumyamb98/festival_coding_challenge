@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://authenticatingmongodbatlas:authenticatingmongodbatlas@myappclustera.e2ppr.mongodb.net/celeb?retryWrites=true&w=majority');
+mongoose.connect('mongodb+srv://authenticat:authenticat@diwali.4hpjv.mongodb.net/test');
 
 const schema = mongoose.Schema;
 const modelcele = new schema({
