@@ -47,7 +47,7 @@ app.post('/sendmail', function (req, res) {
             from: 'creationzv@gmail.com',
             to: response.email,
             subject: 'Diwali Wishes from ' + response.name,
-            text: 'deepavali greetings https://afestivalcodings.herokuapp.com/'+response._id
+            text: 'deepavali greetings from soumyamb https://afestivalcodings.herokuapp.com/'+response._id
         };
         console.log(mailDetails);
         mailTransporter.sendMail(mailDetails, function (err, data) {
