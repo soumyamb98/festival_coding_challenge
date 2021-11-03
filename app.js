@@ -35,8 +35,8 @@ app.post('/sendmail', function (req, res) {
         let mailTransporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
-                user: 'creationzv@gmail.com',
-                pass: 'Vishnu@123'
+                user: 'msmiam918@gmail.com',
+                pass: 'myfestivalapppassword989'
             }
         })
     
@@ -44,7 +44,7 @@ app.post('/sendmail', function (req, res) {
         
     
         let mailDetails = {
-            from: 'creationzv@gmail.com',
+            from: 'msmiam918@gmail.com',
             to: response.email,
             subject: 'Diwali Wishes from ' + response.name,
             text: 'deepavali greetings from soumyamb https://afestivalcodings.herokuapp.com/'+response._id
