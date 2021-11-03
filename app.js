@@ -32,36 +32,35 @@ app.post('/sendmail', function (req, res) {
     diwali.save().then((response) => {
         console.log(response);
 
-        let mailTransporter = nodemailer.createTransport({
-            service: 'gmail',
-            auth: {
-                user: 'msmiam918@gmail.com',
-                pass: 'myfestivalapppassword989'
-            }
-        })
-    
-        console.log("started mail");
+        var transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+            user: 'msmiam918@gmail.com',
+            pass: ''
+        }
+        });
+
+        var mailOptions = {
+        from: 'msmiam918@gmail.com',
+        to: response.email,
+        subject: 'Diwali Wishes from ' + response.name,
+        text: 'deepavali greetings from soumyamb https://afestivalcodings.herokuapp.com/'+response._id
+        };
+        
+        transporter.sendMail(mailOptions, function(error, info){
+        if (error) {
+            console.log(error);
+        } else {
+            res.json({ success: true, name: response.frndname });
+            console.log('Email sent: ' + info.response);
+        }
+        });
+        
         
     
-        let mailDetails = {
-            from: 'msmiam918@gmail.com',
-            to: response.email,
-            subject: 'Diwali Wishes from ' + response.name,
-            text: 'deepavali greetings from soumyamb https://afestivalcodings.herokuapp.com/'+response._id
-        };
+        
         console.log(mailDetails);
-        mailTransporter.sendMail(mailDetails, function (err, data) {
-    
-            if (err) {
-                console.log(err);
-                res.json({ success: false });
-                console.log('Error Occurs! Bad Request');
-            } else {
-                res.json({ success: true, name: response.frndname });
-    
-                console.log('Email sent successfully');
-            }
-        });
+        
     }) // saving to database
 
   
